@@ -2,7 +2,7 @@ package textadventure;
 
 public class Parser {
 
-    private static final String[] commands = {"USE", "TAKE", "GO", "MOVE", "SAY", "DROP", "INV", "ON", "WITH"},
+    private static final String[] commands = {"USE", "TAKE", "GO", "MOVE", "SAY", "DROP", "INV", "ON", "WITH", "EXAMINE", "LOOK"},
             items = {"KNIFE", "MATCHES", "MOUSE", "KEYCARD", "CHEESE", "JAR", "AXE", "JDK", "LETTER", "CABLES", "LANTERN", "NORTH", "EAST", "SOUTH", "WEST"},
             targets = {"DAEMON", "TERMINAL", "LANTERN", "JAR", "SELF", "MOUSE"};
 
