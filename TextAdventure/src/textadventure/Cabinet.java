@@ -1,3 +1,4 @@
+package textadventure;
 
 import java.util.ArrayList;
 
@@ -14,11 +15,11 @@ import java.util.ArrayList;
 public class Cabinet extends Items{
     public ArrayList<Items> cabinet = new ArrayList<Items>();
         public String actionExamine(){
-            if (inventory.length<5){
+            if (player.inv.size() < 5){
                 for(int i = 0;i < 5; i++){
-                    if (inventory[i] == null){
+                    if (player.inv.get(i) == null){
                         Letter Letter = new Letter();
-                         inventory[i] = Letter;
+                         player.inv.add(Letter);
                     }
                 }
                  return"You opened the cabinet and found a letter!";

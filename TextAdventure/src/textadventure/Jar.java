@@ -1,3 +1,4 @@
+package textadventure;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +10,7 @@
  * @author Nick
  */
 public class Jar extends Items{
-    public static boolean isOpen = false;
+    public boolean isOpen = false;
     public String actionExamine(){
         return"It is a plastic jar with a tight lid.";
     }

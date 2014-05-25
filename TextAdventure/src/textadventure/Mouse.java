@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package textadventure;
 
 /**
  *
  * @author Nick
  */
-public class Mouse {
-    public String actionExamine(){
+public class Mouse extends Items {
+
+    public String actionExamine() {
         return "Its a mouse that just ran out of the wall!";
     }
-    public String actionUse(){
-        if (player.location() == serverRoom){
-            return"You plugged the mouse into the terminal!You win!";
-        }
-        else{
-            return"The mouse did nothing...";
-        }
+
+    public String use() {
+        if (player.getLocation() == Room.serverRoom) {
+            return "You plugged the mouse into the terminal! You win!";
+        } else {
+            return "The mouse did nothing...";
         }
     }
 }

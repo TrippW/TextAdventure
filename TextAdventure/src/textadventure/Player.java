@@ -1,3 +1,5 @@
+package textadventure;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,7 +12,9 @@
  */
 public class Player {
     
-    Items[] inventory = new Items[5];
+    public Inventory inv = new Inventory();
     public int health = 10;
     
+    public Player()
+    {}
 }

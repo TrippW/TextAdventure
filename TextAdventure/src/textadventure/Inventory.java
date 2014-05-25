@@ -8,6 +8,19 @@ public class Inventory {
         
     }
     
+    public int size()
+    {
+        for(int i = 0; i < inv.length; i++)
+            if(inv[i] == null)
+                return i;
+        return 5;
+    }
+    
+    public Items get(int i)
+    {
+        return inv[i];
+    }
+    
     public Items get(Items item)
     {
         for(Items i : inv)
