@@ -14,5 +14,10 @@ public class TextAdventure {
         String[] response = Parser.parse(example);
         for(String s: response)
             System.out.println(s);
+        Player user = new Player();
+        while(true)
+        {
+        	user.getRoom
+        }
     }
 }

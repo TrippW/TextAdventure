@@ -12,9 +12,32 @@ package textadventure;
  */
 public class Player {
     
-    public Inventory inv = new Inventory();
+    Inventory inventory = new Inventory();
+    public int points = 0;
     public int health = 10;
-    
-    public Player()
-    {}
+    public Rooms location;
+    public Rooms getRoom(){
+        return location;
+    }
+    public int getHealth(){
+        return health;
+    }
+    public int getPoints(){
+        return points;
+    }
+    public void setHealth(int currentH, int change){
+        health = currentH - change;
+    }
+    private void setRoom(Rooms currentRoom){
+         location = currentRoom;
+    }
+    public void move(int dir){
+        Rooms temp = getRoom().getRoomsInDirection(dir);
+        if(temp == null){
+            return;
+        } 
+        else {
+            setRoom(temp);
+        }
+    }
 }

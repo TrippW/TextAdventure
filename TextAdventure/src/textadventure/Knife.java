@@ -18,5 +18,8 @@ public class Knife extends Items
     public String actionExamine(){
         return "A very old knife. It is dull and rusted.";
     }
-    
+    public String toString()
+    {
+        return "Knife";
+    }
 }

@@ -17,4 +17,8 @@ public class KeyCard extends Items{
     public String actionUse(){
             return"The keycard cannot be used here.";
     }
+    public String toString()
+    {
+        return "KeyCard";
+    }
 }

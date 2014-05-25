@@ -14,13 +14,18 @@ public class Cables extends Items{
         return"It is a broken cable. There are cables like this one lying all over the floor.";
     }
     public String actionUse(){
-        if (health>2){
-            health-=2;
+        if (player.getHealth()>2){
+            player.setHealth(player.getHealth(), -2);
             return"You try to use the cables and give yourself a mild shock. You lost some health.";
         }
         else{
-            health-=2;
+            player.setHealth(player.getHealth(), -2);
             return"You played with the cables and shocked yourself. This is why you dont play with wires...you died.";
         }
+    }
+    
+    public String toString()
+    {
+        return "Cables";
     }
 }

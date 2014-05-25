@@ -21,4 +21,8 @@ public class Jar extends Items{
         boolean isOpen = true;
         return"The jar was opened!";
     }
+    public String toString()
+    {
+        return "Jar";
+    }
 }

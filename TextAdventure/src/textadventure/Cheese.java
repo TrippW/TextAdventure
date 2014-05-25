@@ -14,14 +14,18 @@ public class Cheese extends Items{
         return"It is an old moldy cheese with a foul oder.";
     }
     public String actionUse(){
-        if (player.location() == adminRoom){
-          return"The cheese attracted a mouse!";
+        if (player.getRoom().getClass().isInstance(AdminOffice.class)){
           //arraylist for the room:
-          room.add(mouse);
-          return"A mouse ran into the room.";
+          player.location.add(new Mouse());
+          return"The cheese attracted a mouse!";
         }
         else{
-            return"You just ate moldy cheese....You lost 2 points of health. Your health is at " + health;
+            return"You just ate moldy cheese....You lost 2 points of health. Your health is at " + player.health;
         }
+    }
+    
+    public String toString()
+    {
+        return "Cheese";
     }
 }

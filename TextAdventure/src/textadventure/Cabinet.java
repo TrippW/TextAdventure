@@ -13,16 +13,23 @@ import java.util.ArrayList;
  * @author Nick
  */
 public class Cabinet extends Items{
+    
+    private boolean isLocked;
+    
+    public Cabinet(Items i, boolean locked)
+    {
+        isLocked = locked;
+    }
     public ArrayList<Items> cabinet = new ArrayList<Items>();
         public String actionExamine(){
-            if (player.inv.size() < 5){
+            if (player.inventory.size() < 5){
                 for(int i = 0;i < 5; i++){
-                    if (player.inv.get(i) == null){
+                    if (player.inventory.get(i) == null){
                         Letter Letter = new Letter();
-                         player.inv.add(Letter);
+                         player.inventory.add(Letter);
                     }
                 }
-                 return"You opened the cabinet and found a letter!";
+                 return "You opened the cabinet and found a letter!";
         }
             return"You opened the cabinet and found a letter. However your inventory is full.";
     }

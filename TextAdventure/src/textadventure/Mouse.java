@@ -16,10 +16,14 @@ public class Mouse extends Items {
     }
 
     public String use() {
-        if (player.getLocation() == Room.serverRoom) {
+        if (player.getRoom().getClass().isInstance(ServerRoom.class)) {
             return "You plugged the mouse into the terminal! You win!";
         } else {
             return "The mouse did nothing...";
         }
+    }
+    public String toString()
+    {
+        return "Mouse";
     }
 }

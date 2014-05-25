@@ -29,12 +29,12 @@ public class Inventory {
         return null;
     }
     
-    public void remove(Room r, Items item)
+    public void remove(Rooms r, Items item)
     {
         for(int i = 0; i < inv.length; i++)
             if(inv[i] == item){
                 inv[i] = null;
-                r.put(item);
+                r.add(item);
             }
     }
     

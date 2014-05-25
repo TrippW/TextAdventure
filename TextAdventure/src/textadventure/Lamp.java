@@ -17,4 +17,8 @@ public class Lamp extends Items{
     public String actionUse(){
         return "The lamp illuminated the room.";
     }
+    public String toString()
+    {
+        return "Lamp";
+    }
 }
