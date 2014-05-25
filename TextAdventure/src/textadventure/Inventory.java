@@ -8,15 +8,15 @@ public class Inventory {
         
     }
     
-    public Item get(Item item)
+    public Items get(Items item)
     {
-        for(Item i : inv)
+        for(Items i : inv)
             if(i == item)
                 return i;
         return null;
     }
     
-    public void remove(Room r, Item item)
+    public void remove(Room r, Items item)
     {
         for(int i = 0; i < inv.length; i++)
             if(inv[i] == item){
@@ -25,7 +25,7 @@ public class Inventory {
             }
     }
     
-    public void add(Item item)
+    public void add(Items item)
     {
         if(inv.length >= MAX_SIZE)
             return;
@@ -34,7 +34,7 @@ public class Inventory {
                 inv[i] = item;
     }
     
-    public Item[] open()
+    public Items[] open()
     {
         return inv;
     }
