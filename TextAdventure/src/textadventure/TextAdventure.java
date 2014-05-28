@@ -1,5 +1,6 @@
 package textadventure;
 
+import java.util.Scanner;
 /**
  *
  * @author Tripp
@@ -15,9 +16,14 @@ public class TextAdventure {
         for(String s: response)
             System.out.println(s);
         Player user = new Player();
-        while(true)
+        boolean win = false;
+    	System.out.println(user.getStartText());
+    	Scanner scan = new Scanner(System.in);
+        while(!win)
         {
-        	user.getRoom
+        	System.out.println("What do you do? ");
+        	String input = scan.nextLine();
+        	System.out.println(user.act(input));
         }
     }
 }

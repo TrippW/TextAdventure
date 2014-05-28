@@ -20,8 +20,11 @@ public abstract class Items {
         player = p;
     }
     
-    public String use()
+    public String actionUse()
     {
         return "";
     }
+    
+    public String actionExamine()
+    {return "";}
 }

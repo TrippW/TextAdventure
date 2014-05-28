@@ -31,4 +31,9 @@ public abstract class Rooms {
     public Rooms getRoomsInDirection(int dir) {
         return neighbors[dir];
     }
+    
+    public String getDescription()
+    {
+    	return "";
+    }
 }

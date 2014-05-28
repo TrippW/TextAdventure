@@ -38,6 +38,15 @@ public class Inventory {
             }
     }
     
+    public void remove(Rooms r, String item)
+    {
+        for(int i = 0; i < inv.length; i++)
+            if(inv[i].toString().equalsIgnoreCase(item)){
+                r.add(inv[i]);
+                inv[i] = null;
+            }
+    }
+    
     public void add(Items item)
     {
         if(inv.length >= MAX_SIZE)
